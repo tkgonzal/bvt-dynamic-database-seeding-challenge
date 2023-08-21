@@ -1,0 +1,17 @@
+{
+  "name": "dynamic-database-seeding",
+  "version": "1.0.0",
+  "description": "Developers often utilize tooling that will seed data. Seeding data is the process of (intelligently) creating structured data in a meaningful way. This is especially useful when the volume of data that needs to be generated is high.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.3.1",
+    "mysql2": "^3.6.0"
+  }
+}

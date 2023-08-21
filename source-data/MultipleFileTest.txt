@@ -1,0 +1,4 @@
+Benefit_Plan_ID|Benefit_Plan_EIN|Benefit_Plan_Name|Network_ID|Network_Name|Network_Order
+HC25|391876261|POS IN $1000/2500 OUT $3000/9000|3|Health Choices|1
+HP100|50735IA036|IA SG Sky Mutual Health QHDHP Gold|32|Sky Company Insurance|1
+HP700|50735IA036|IA SG Sky Mutual Health QHDHP Gold|32|Sky Company Insurance|1
