@@ -29,10 +29,10 @@ const connection = mysql.createConnection({
  * to create source data for that table
  * @param {number} fileNo The index of the file in the array of files from the
  * source-data
- * @param {number} n The amount of files in source-data. Used to check for when
- * to shut down the connection
+ * @param {number} fileAmt The amount of files in source-data. Used to check for 
+ * when to shut down the connection
  */
-function processFile(file, fileNo, n) {
+function processFile(file, fileNo, fileAmt) {
     const tableName = path.parse(file).name;
     let columnNames = [];
     const columnTypes = new Map();
@@ -80,7 +80,7 @@ function processFile(file, fileNo, n) {
         console.log(`Finished processing ${file}`);
 
         // The last file has been processed, end the database connection
-        if (fileNo === n - 1) {
+        if (fileNo === fileAmt - 1) {
             connection.end();
         }
     });
@@ -248,6 +248,5 @@ function getColumnDataType(columnType) {
 // --------MAIN DRIVER--------
 (() => {
     const files = fs.readdirSync(SOURCE_DATA_DIR);
-    const n = files.length;
-    files.forEach((file, index) => processFile(file, index, n));
+    files.forEach((file, index) => processFile(file, index, files.length));
 })();
